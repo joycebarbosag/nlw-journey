@@ -76,6 +76,7 @@ public class TripController {
         return ResponseEntity.notFound().build();
     }
 
+    //retornar participantes
     @GetMapping("/{id}/participants")
     public ResponseEntity<List<ParticipantData>> getAllParticipants(@PathVariable UUID id){
         List<ParticipantData> participantList = this.participantService.getAllParticipantsFromEvent(id);
