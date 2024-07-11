@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "9763e199-3b8e-4fdb-bd07-896ee2ba9c3b",
+		"name": "Trip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateTrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"Recife, PE\",\r\n    \"starts_at\": \"2024-06-25T21:51:54.734Z\",\r\n    \"ends_at\": \"2024-06-25T21:51:54.734Z\",\r\n    \"emails_to_invite\": [\r\n        \"joycebarbosa.gomess@gmail.com\",\r\n        \"juliaa.karolini@gmail.com\"\r\n    ],\r\n    \"owner_name\": \"Joyce Barbosa\",\r\n    \"owner_email\": \"joyce.gomes@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterActivity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Visita ao Cristo Redentor\",\r\n    \"occours_at\": \"2024-06-23T21:51:54.734Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips/0f078a8a-4df3-4a2c-a3dd-df029a7bf22f/activities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"0f078a8a-4df3-4a2c-a3dd-df029a7bf22f",
+						"activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterLink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Corcovado\",\r\n    \"url\": \"www.google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips/b4b27ba8-e93e-49a9-89bf-b2471654bb73/links",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"b4b27ba8-e93e-49a9-89bf-b2471654bb73",
+						"links"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTrip",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"Fortaleza, CE\",\r\n    \"starts_at\": \"2024-06-25T21:51:54.734Z\",\r\n    \"ends_at\": \"2024-06-25T21:51:54.734Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips/16fe1a15-f1d9-4dbc-979e-33d5ac628ccc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"16fe1a15-f1d9-4dbc-979e-33d5ac628ccc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTripActivities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trips/28e08e40-ea86-4810-a5a0-c83214e2db11/activities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"28e08e40-ea86-4810-a5a0-c83214e2db11",
+						"activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTripLinks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trips/b4b27ba8-e93e-49a9-89bf-b2471654bb73/links",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"b4b27ba8-e93e-49a9-89bf-b2471654bb73",
+						"links"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTripParticipants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trips/90beb3b5-3f92-493b-84c8-e61ff3a84d1f/participants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"90beb3b5-3f92-493b-84c8-e61ff3a84d1f",
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTrip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trips/98f994c6-d371-43c8-8548-668f72dfd60f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"98f994c6-d371-43c8-8548-668f72dfd60f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmTrip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trips/f6f74b80-33d7-410d-b3f4-ab5324bb15f2/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"f6f74b80-33d7-410d-b3f4-ab5324bb15f2",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmParticipant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Joyce Gomes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/participants/1b67395a-d84a-464a-a5e5-34faee76e433/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"participants",
+						"1b67395a-d84a-464a-a5e5-34faee76e433",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InviteParticipant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"joycebarbosa.gomess@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips/cbb515a1-9376-4400-ba0d-d4e1e8747b7f/invite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips",
+						"cbb515a1-9376-4400-ba0d-d4e1e8747b7f",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
